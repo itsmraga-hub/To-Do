@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 62.5%;
+  background-color: #f1f2f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 2em;
+  background-color: rgb(250, 250, 250);
+  box-shadow: 1px 1px 4px 1px #aaa;
+}
+
+.main-container .container {
+  width: 100%;
+}
+
+.main-container .container .container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75em 1em;
+  border-bottom: 1px solid #aaa;
+}
+
+.main-container .container .input {
+  width: 100%;
+  border-bottom: 1px solid #aaa;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding-right: 1em;
+}
+
+#refresh {
+  transition: 200ms ease-in-out;
+}
+
+.main-container .container .input .add-btn {
+  background-color: #fff;
+  border: none;
+}
+
+.main-container .container .input .new-input {
+  width: 100%;
+  font-size: 1em;
+  font-style: italic;
+  padding: 0.75em 1em;
+  border: none;
+}
+
+.main-container .container .input .new-input:focus {
+  border: none;
+  outline: none;
+}
+
+.main-container .container .input .add-btn svg {
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.hidden {
+  display: none;
+}
+
+.main-container .container .tasks-list {
+  list-style: none;
+  width: 100%;
+}
+
+.main-container .container .tasks-list .task {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1em;
+  border-bottom: 1px solid #aaa;
+  font-weight: 100;
+  align-items: center;
+}
+
+.main-container .container .tasks-list .task .task-desc {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.main-container .container .tasks-list .task .task-desc .task-edit {
+  border: none;
+  padding: 1.25em;
+  width: 100%;
+  outline: none;
+}
+
+.main-container .container .tasks-list .task .task-desc .task-edit:focus {
+  background-color: #ffffa7;
+}
+
+.main-container .container .tasks-list .task .task-desc .task-edit:disabled {
+  border: none;
+  padding: 1.25em;
+  width: 100%;
+  outline: none;
+}
+
+.main-container .container .tasks-list .task .task-desc input {
+  margin-right: 1em;
+}
+
+.main-container .container .tasks-list .task .task-desc input.toggle-check {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.main-container .container .tasks-list .task .task-desc .description {
+  width: 100%;
+}
+
+.main-container .container .btn {
+  width: 100%;
+  background-color: #f1f2f5;
+  font-size: 1.2em;
+  border: none;
+  padding: 0.5em;
+}
+
+@media (min-width: 768px) {
+  body {
+    width: 40%;
+    margin: 0 auto;
+  }
+}
