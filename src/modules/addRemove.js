@@ -7,6 +7,10 @@ class Task {
 
   addTask = (task, tasks) => {
     tasks.push(task);
+    for (let i = 0, index = 1; i < tasks.length; i += 1) {
+      tasks[i].index = index;
+      index += 1;
+    }
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }
 
@@ -19,9 +23,9 @@ class Task {
 
 const loadFromStorage = (tasks) => {
   tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-  for (let i = 0; i < tasks.length; i += 1) {
-    tasks[i].index = i + 1;
-  }
+  // for (let i = 0; i < tasks.length; i += 1) {
+  //   tasks[i].index = i + 1;
+  // }
   return tasks;
 };
 

@@ -60,10 +60,12 @@ const createTask = (input) => {
 
 const taskDesc = document.querySelector('#new-task');
 
-document.querySelector('#addBtn').addEventListener('click', () => {
-  createTask(taskDesc);
-  resetForm(taskDesc);
-  displayTasks(tasks);
+document.querySelector('#addBtn').addEventListener('click', (e) => {
+  if (e.target.parentElement.parentElement.children[0].value) {
+    createTask(taskDesc);
+    resetForm(taskDesc);
+    displayTasks(tasks);
+  }
 });
 
 // Event listener to add task on Enter keypress
